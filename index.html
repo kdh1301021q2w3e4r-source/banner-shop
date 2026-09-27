@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Shop</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0f;
+      color: white;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #24242c;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #8b5cff;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #8b5cff;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 7%;
+    }
+
+    section h2 {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #15151c;
+      border: 1px solid #272733;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .preview {
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #8b5cff, #15151c);
+    }
+
+    .card:nth-child(2) .preview {
+      background: linear-gradient(135deg, #ff4ecd, #15151c);
+    }
+
+    .card:nth-child(3) .preview {
+      background: linear-gradient(135deg, #00d4ff, #15151c);
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    .info p {
+      color: #aaa;
+      margin: 10px 0 15px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #8b5cff;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111118;
+      border-radius: 20px;
+      padding: 50px 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BANNER SHOP</div>
+
+    <nav>
+      <a href="#works">작업물</a>
+      <a href="#price">가격</a>
+      <a href="#contact">주문</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>나만의 <span>배너 & 프사</span></h1>
+    <p>개성 있는 디자인을 제작해드립니다.</p>
+    <a class="button" href="#works">작업물 보기</a>
+  </div>
+
+  <section id="works">
+    <h2>🎨 작업물</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="preview">BANNER</div>
+        <div class="info">
+          <h3>배너 디자인</h3>
+          <p>원하는 스타일로 제작</p>
+          <div class="price">5,000원~</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview">PROFILE</div>
+        <div class="info">
+          <h3>프로필 디자인</h3>
+          <p>디스코드 · 카톡 · SNS</p>
+          <div class="price">3,000원~</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview">CUSTOM</div>
+        <div class="info">
+          <h3>커스텀 디자인</h3>
+          <p>원하는 느낌으로 제작</p>
+          <div class="price">문의</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="price">
+    <h2>💰 가격</h2>
+
+    <div class="card">
+      <div class="info">
+        <h3>배너</h3>
+        <p>기본 배너 제작</p>
+        <div class="price">5,000원~</div>
+      </div>
+    </div>
+    <br>
+
+    <div class="card">
+      <div class="info">
+        <h3>프로필</h3>
+        <p>프로필 이미지 제작</p>
+        <div class="price">3,000원~</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>📩 주문하기</h2>
+      <p style="color:#aaa; margin:15px 0 25px;">
+        제작을 원하시면 아래 버튼을 눌러주세요.
+      </p>
+
+      <a class="button" href="#">
+        주문 문의하기
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Banner Shop
+  </footer>
+
+</body>
+</html>
